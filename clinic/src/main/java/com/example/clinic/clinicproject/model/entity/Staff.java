@@ -9,16 +9,15 @@ import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDate;
 
-@Entity(name = "staffEntity")
+@MappedSuperclass
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @SuperBuilder
 @ToString
-@Table(name = "staff")
 @SequenceGenerator(name = "STAFF_SEQ_GENERATOR", sequenceName = "SEQ_STAFF", initialValue = 1, allocationSize = 10)
-public class Staff
+public abstract class Staff
 {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "STAFF_SEQ_GENERATOR")
