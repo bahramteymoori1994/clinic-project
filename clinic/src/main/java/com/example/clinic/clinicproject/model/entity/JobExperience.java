@@ -37,6 +37,6 @@ public class JobExperience
     @ManyToOne
     @JoinColumn(name = "A1002ID", referencedColumnName = "A1002ID")
     private Staff staff;
-    
+
     //TODO: write medicine staff
 }
